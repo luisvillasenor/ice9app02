@@ -1,20 +1,81 @@
 <script type="text/javascript">
+    ShopifyApp.print = function(){
+    changeSomeLayout();
+    window.print();
+    doSomeOtherAction();
+  }
+
   ShopifyApp.ready(function(){
     ShopifyApp.Bar.initialize({
-      title: "Home",
-      icon: "<%= asset_path('faveicon.png') %>"
-    });
+      buttons: {
+        primary: {
+          label: 'Print',
+          print: true
+        }
+      },
+  buttons: {
+    primary: {
+      label: "Refresh",
+      message: 'bar_save',
+      loading: false
+    },
+    secondary: [
+      { label: "Help", callback: function(){ alert('help'); } },
+      { label: "Configuration", href: "http://my-app.com/preview_url", target: "new" }
+    ],
+  },
+  title: 'Call Phone Orders',
+  icon: 'https://example.com/path/to/icon.png',
+  pagination: {
+    next: {
+      href: "/posts?page=2"
+    },
+    previous: {
+      callback: function(){ alert('no previous pages') },
+      loading: false
+    }
+  }
+});
   });
 </script>
-<h3>Products</h3>
-<table>
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td>
-          <a href='https://<%="#{@shop_session.url}/admin/products/#{product.id}"%>' target="_blank"> <%= product.id %> </a>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="section-listing">
+    <div class="section-options">
+        <ul class="section-tabs">
+            <li class="active"><a href="#top">All</a></li>
+            
+        </ul>
+        <div class="section-filter">
+          <div class="section-row">
+            <input class="input-search" placeholder="Order number..." type="text">
+          </div>
+        </div>
+        <div class="section-content">
+            <div class="section-row">
+                <table class="table-section">
+                  <thead>
+                  <tr>
+                      <th class="sortable">Order #</th>
+                      <th class="sortable">Date</th>
+                      <th class="sortable">Email</th>
+                      <th class="sortable">Payment Status</th>
+                      <th class="sortable">Total</th>
+                      <th></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                      <% @orders.each do |order| %>
+                        <tr>
+                          <td><%= order.name %> </a></td>
+                          <td><%= order.created_at %></td>
+                          <td><%= order.email %></td>
+                          <td><%= order.financial_status %></td>
+                          <td><%= order.total_price %></td>
+                          <td><a href="#top" class="btn default">Cobrar</a></td>
+                        </tr>
+                      <% end %>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>        
