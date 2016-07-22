@@ -21,11 +21,11 @@
     },
     secondary: [
       { label: "Help", callback: function(){ alert('help'); } },
-      { label: "Configuration", href: "http://ice9app02.herokuapp.com/preview_url", target: "new" }
+      { label: "Configuration", href: "http://my-app.com/preview_url", target: "new" }
     ],
   },
   title: 'Call Phone Orders',
-  icon: 'https://ice9app02.herokuapp.com/asset/images/icon.png',
+  icon: 'https://example.com/path/to/icon.png',
   pagination: {
     next: {
       href: "/posts?page=2"
@@ -35,15 +35,13 @@
       loading: false
     }
   }
-  ShopifyApp.flashNotice("Unicorn was created successfully.");
 });
   });
 </script>
 <div class="section-listing">
     <div class="section-options">
         <ul class="section-tabs">
-            <li class="active"><a href="#top">All</a></li>
-            <li><%= link_to 'Pendientes', user %></li>
+            <li class="active"><a href="#top">All</a></li>z
             
         </ul>
         <div class="section-filter">
@@ -69,9 +67,9 @@
                         <tr>
                           <td><%= order.name %> </a></td>
                           <td><%= order.created_at %></td>
-                          <td><%=  %></td>
-                          <td><%=  %></td>
-                          <td><%=  %></td>
+                          <td><%= order.email %></td>
+                          <td><%= order.financial_status %></td>
+                          <td><%= order.total_price %></td>
                           <td><a href="#top" class="btn default">Cobrar</a></td>
                         </tr>
                       <% end %>
