@@ -42,7 +42,12 @@
         </ul>
         <div class="section-filter">
           <div class="section-row">
-            <input class="input-search" placeholder="Order number..." type="text">
+            <%= form_for(@get_order) do |f| %>
+            <%= f.label :text %>
+            <%= f.name_field :name, class: 'input-search' %>
+            <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+            <% end %>
+          
           </div>
         </div>
         <div class="section-content">
@@ -65,9 +70,12 @@
                           <td><%= order.created_at %></td>
                           <td><%= order.email %></td>
                           <td><%= order.financial_status %></td>
-                          <td><%= order.total_price %></td>
+                          <td><%= number_to_currency order.total_price %></td>
                           <td><a href="#top" class="btn default">Cobrar</a></td>
                         </tr>
+                      <% end %>
+                      <% if @orders.size == 0 %>
+                        <em>No se encontraron ordenes</em>
                       <% end %>
                   </tbody>
                 </table>

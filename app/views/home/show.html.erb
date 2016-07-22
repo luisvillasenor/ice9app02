@@ -42,7 +42,7 @@
         </ul>
         <div class="section-filter">
           <div class="section-row">
-            <%= form_for(@show) do |f| %>
+            <%= form_for(@get_order) do |f| %>
             <%= f.label :text %>
             <%= f.name_field :name, class: 'input-search' %>
             <%= f.submit "Submit", :disable_with => 'Submiting...' %>
@@ -64,17 +64,17 @@
                   </tr>
                   </thead>
                   <tbody>
-                      <% @orders.each do |order| %>
+                      <% @order.each do |o| %>
                         <tr>
-                          <td><%= order.name %> </a></td>
-                          <td><%= order.created_at %></td>
-                          <td><%= order.email %></td>
-                          <td><%= order.financial_status %></td>
-                          <td><%= number_to_currency order.total_price %></td>
+                          <td><%= o.name %> </a></td>
+                          <td><%= o.created_at %></td>
+                          <td><%= o.email %></td>
+                          <td><%= o.financial_status %></td>
+                          <td><%= number_to_currency o.total_price %></td>
                           <td><a href="#top" class="btn default">Cobrar</a></td>
                         </tr>
                       <% end %>
-                      <% if @orders.size == 0 %>
+                      <% if @order.size == 0 %>
                         <em>No se encontraron ordenes</em>
                       <% end %>
                   </tbody>
