@@ -12,7 +12,7 @@ class HomeController < AuthenticatedController
   end
 
   def paid
-  	@orders = ShopifyAPI::Order.find(:all, :params => {:fields => "name,created_at,email,financial_status,total_price", :financial_status => "pais", :limit => 10})
+  	@orders = ShopifyAPI::Order.find(:all, :params => {:fields => "name,created_at,email,financial_status,total_price", :financial_status => "paid", :limit => 10})
   	
   end
 end
