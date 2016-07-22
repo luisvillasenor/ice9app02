@@ -42,7 +42,7 @@
         </ul>
         <div class="section-filter">
           <div class="section-row">
-            <%= form_tag("/show") do %>
+            <%= form_tag({controller: "home", action: "show"}, method: "post") do %>
             <%= label_tag(:name, "Buscar ordenes") %>
             <%= text_field_tag(:name) %>
             <%= submit_tag("Buscar") %>
