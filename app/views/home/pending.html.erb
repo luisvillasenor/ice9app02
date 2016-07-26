@@ -41,6 +41,11 @@
         </ul>
         <div class="section-filter">
           <div class="section-row">
+          <%= form_tag("/home", method: "index") do %>
+            <%= label_tag(:q, "Search for:") %>
+            <%= text_field_tag(:q) %>
+            <%= submit_tag("Search") %>
+          <% end %>
             
           </div>
         </div>
