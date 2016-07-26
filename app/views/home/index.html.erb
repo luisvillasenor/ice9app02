@@ -36,16 +36,14 @@
     <div class="section-options">
         <ul class="section-tabs">
             <li class="active"><%= link_to "All", home_index_url %></li>
-            <li class="active"><%= link_to "Pending", home_pending_url %></li>
-            <li class="active"><%= link_to "Paid", home_paid_url %></li>
             
         </ul>
         <div class="section-filter">
           <div class="section-row">
-            <%= form_tag({controller: "home", action: "show"}, method: "post") do %>
-            <%= label_tag(:name, "Buscar ordenes") %>
-            <%= text_field_tag(:name) %>
-            <%= submit_tag("Buscar") %>
+            <%= #form_tag({controller: "home", action: "index"}, method: "post") do %>
+            <%= #label_tag(:name, "Buscar ordenes") %>
+            <%= #text_field_tag(:name) %>
+            <%= #submit_tag("Buscar") %>
             <% end %>
           
           </div>
