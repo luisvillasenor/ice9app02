@@ -20,6 +20,6 @@ class HomeController < AuthenticatedController
   #		format.html # show.html.erb
   #		format.json { render json: @order }
   #	end
-  #end
+  # end
 
 end
