@@ -61,7 +61,7 @@
                       <% @orders.each do |order| %>
                         <tr>
                           <td><%= order.name %> </a></td>
-                          <td><%= order.created_at %></td>
+                          <td><%= order.created_at | '%B' %></td>
                           <td><%= order.email %></td>
                           <td><%= order.financial_status %></td>
                           <td><%= number_to_currency order.total_price %></td>
