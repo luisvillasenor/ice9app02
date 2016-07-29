@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   root :to => 'home#index'
   get 'home/index'  => 'home#index'
   get 'home/pending' => 'home#pending'
+  get 'home/show' => 'home#show'
   #get 'home/paid'
   #get 'home/:name' => 'home#show'
   # The priority is based upon order of creation: first created -> highest priority.
