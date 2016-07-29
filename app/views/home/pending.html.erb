@@ -35,17 +35,12 @@
 <div class="section-listing">
     <div class="section-options">
         <ul class="section-tabs">
-            <li class="active"><%= link_to "All", root_path %></li>
+            <li class="active"><%= link_to "All", home_index_path %></li>
             <li class="active"><%= link_to "Pending", home_pending_path %></li>
             
         </ul>
         <div class="section-filter">
           <div class="section-row">
-          <%= form_tag("/home", method: "index") do %>
-            <%= label_tag(:name, "Search for:") %>
-            <%= text_field_tag(:name) %>
-            <%= submit_tag("Search") %>
-          <% end %>
             
           </div>
         </div>
@@ -66,7 +61,7 @@
                       <% @orders.each do |order| %>
                         <tr>
                           <td><%= order.name %> </a></td>
-                          <td><%= order.created_at %></td>
+                          <td><%= order.created_at.to_datetime.to_formatted_s(:long) %></td>
                           <td><%= order.email %></td>
                           <td><%= order.financial_status %></td>
                           <td><%= number_to_currency order.total_price %></td>
