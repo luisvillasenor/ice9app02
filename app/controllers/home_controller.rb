@@ -16,9 +16,9 @@ class HomeController < AuthenticatedController
 
   def show
   	@order = ShopifyAPI::Order.where("name = ?", params[:name])
-  	#respond_to do |format|
-  	#	format.html # show.html.erb
-  	#	format.json { render json: @order }
+  	respond_to do |format|
+  		format.html # show.html.erb
+  		format.json { render json: @order }
   	end
    end
 

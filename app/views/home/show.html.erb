@@ -50,33 +50,7 @@
         </div>
         <div class="section-content">
             <div class="section-row">
-                <table class="table-section">
-                  <thead>
-                  <tr>
-                      <th class="sortable">Order #</th>
-                      <th class="sortable">Date</th>
-                      <th class="sortable">Email</th>
-                      <th class="sortable">Payment Status</th>
-                      <th class="sortable">Total</th>
-                      <th></th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                      <% @orders.each do |order| %>
-                        <tr>
-                          <td><%= order.name %> </a></td>
-                          <td><%= order.created_at.to_datetime.to_formatted_s(:short) %></td>
-                          <td><%= order.email %></td>
-                          <td><%= order.financial_status %></td>
-                          <td><%= number_to_currency order.total_price %></td>
-                          <td><a href="#top" class="btn default">Cobrar</a></td>
-                        </tr>
-                      <% end %>
-                      <% if @orders.size == 0 %>
-                        <em>No se encontraron ordenes</em>
-                      <% end %>
-                  </tbody>
-                </table>
+                <% yield %>
             </div>
         </div>
     </div>
