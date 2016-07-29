@@ -25,7 +25,7 @@ class HomeController < AuthenticatedController
   			flash[:notice] = "Hola #{ params[:name]}"
   			
   		else
-  			flasj[:notice] = "Nombre debe ser SET"
+  			flash[:notice] = "Nombre debe ser SET"
   			
   		end
   		
