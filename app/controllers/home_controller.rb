@@ -14,12 +14,12 @@ class HomeController < AuthenticatedController
   #	@orders = ShopifyAPI::Order.find(:all, :params => {:fields => "name,created_at,email,financial_status,total_price", :financial_status => "paid", :limit => 10})
   #end
 
-  #def show
-  #	@order = ShopifyAPI::Order.find(params(:name))
-  #	respond_to do |format|
-  #		format.html # show.html.erb
-  #		format.json { render json: @order }
-  #	end
-  # end
+  def show
+  	@order = ShopifyAPI::Order.find(params(:name))
+  	respond_to do |format|
+  		format.html # show.html.erb
+  		format.json { render json: @order }
+  	end
+   end
 
 end
