@@ -15,22 +15,11 @@ class HomeController < AuthenticatedController
   #end
 
   def show
-  	#@order = ShopifyAPI::Order.find_by(name: params[:name])
-  	#respond_to do |format|
+  	@order = ShopifyAPI::Order.find_by(name: params[:name])
+  	respond_to do |format|
   	#	format.html # show.html.erb
-  	#	format.json { render json: @order }
-  	#end
-  	if request.post?
-  		if params[:name].present?
-  			flash[:notice] = "Hola #{ params[:name]}"
-  			
-  		else
-  			flash[:notice] = "Nombre debe ser SET"
-  			
-  		end
-  		
+  		format.json { render json: @order }
   	end
-
-   end
+  end
 
 end
