@@ -16,10 +16,10 @@ class HomeController < AuthenticatedController
 
   def show
   	@order = ShopifyAPI::Order.find_by(name: params[:name])
-  	respond_to do |format|
+  	#respond_to do |format|
   	#	format.html # show.html.erb
-  		format.json { render json: @order }
-  	end
+  	#	format.json { render json: @order }
+  	#end
   end
 
 end
