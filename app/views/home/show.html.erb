@@ -62,19 +62,17 @@
                   </tr>
                   </thead>
                   <tbody>
-                      <% @orders.each do |order| %>
+                      
                         <tr>
-                          <td><%= order.id %> </a></td>
-                          <td><%= order.created_at.to_datetime.to_formatted_s(:short) %></td>
-                          <td><%= order.email %></td>
-                          <td><%= order.financial_status %></td>
-                          <td><%= number_to_currency order.total_price %></td>
+                          <td><%= orders.id %> </a></td>
+                          <td><%= orders.created_at.to_datetime.to_formatted_s(:short) %></td>
+                          <td><%= orders.email %></td>
+                          <td><%= orders.financial_status %></td>
+                          <td><%= number_to_currency orders.total_price %></td>
                           <td><a href="#top" class="btn default">Cobrar</a></td>
                         </tr>
-                      <% end %>
-                      <% if @orders.size == 0 %>
-                        <em>No se encontraron ordenes</em>
-                      <% end %>
+                     
+                      
                   </tbody>
                 </table>
             </div>
