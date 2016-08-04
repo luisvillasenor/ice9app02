@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   end
 
   root :to => 'home#index'
-  get 'home/index'  => 'home#index'
-  get 'home/pending' => 'home#pending'
-  get 'home/show/:name' => 'home#show'
+  get '/index'  => 'home#index'
+  get '/pending' => 'home#pending'
+  get '/show/:id' => 'home#show'
   #get 'home/paid'
   #get 'home/:name' => 'home#show'
   # The priority is based upon order of creation: first created -> highest priority.
