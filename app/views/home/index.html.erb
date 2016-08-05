@@ -50,7 +50,9 @@
         </div>
         <div class="section-content">
             <div class="section-row">
-                
+                <% if @orders.size == 0 %>
+                  <em>No se encontraron ordenes ó se capturo mal el numero de la orden</em>
+                  <% else %>
                   <table class="table-section">
                     <thead>
                     <tr>
@@ -75,7 +77,7 @@
                         <% end %>
                     </tbody>
                   </table>                  
-                
+                <% end %>
             </div>
         </div>
     </div>
