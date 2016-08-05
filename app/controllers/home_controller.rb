@@ -18,6 +18,10 @@ class HomeController < AuthenticatedController
   def show
   	@orders = ShopifyAPI::Order.find(:all, :params => {:fields => "id,name,created_at,email,financial_status,total_price", :name => params[:name], :limit => 250 })
   	#render json: @orders
+  	if @orders.size == 0
+  		flash[:notice] = "Lo siento, no se encontraron registros"
+  		redirect_to(index_path)  		
+  	end
   	render action: 'index'
   end
 
