@@ -67,7 +67,7 @@
                     <tbody>
                         <% @orders.each do |order| %>
                           <tr>
-                            <td><%= link_to order.name, edit_path(order) %></td>
+                            <td><%= link_to order.name, edit_url(order) %></td>
                             <td><%= order.created_at.to_datetime.to_formatted_s(:short) %></td>
                             <td><%= order.email %></td>
                             <td><%= order.financial_status %></td>
