@@ -24,7 +24,7 @@ class HomeController < AuthenticatedController
   def edit
   	@orders = ShopifyAPI::Order.find(:all, :params => {:fields => "id,name,created_at,email,financial_status,total_price", :name => params[:name], :limit => 250 })
   	#render json: @orders
-  	render action: 'index'
+  	#render action: 'index'
   end
 
 end
