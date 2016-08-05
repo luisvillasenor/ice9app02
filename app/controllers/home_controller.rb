@@ -20,7 +20,7 @@ class HomeController < AuthenticatedController
   	#render json: @orders
   	if @orders.size == 0
   		flash[:notice] = "Lo siento, no se encontraron registros"
-  		redirect_to(index_path)  		
+  		redirect_to('index')  		
   	end
   	render action: 'index'
   end
