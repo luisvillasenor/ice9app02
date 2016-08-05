@@ -50,13 +50,12 @@
         </div>
         <div class="section-content">
             <div class="section-row">  
-              <%= form_tag(edit_path, method: "get") do %>
-                <% @orders.each do |order| %>
-                  <%= label_tag(:name , "Order #: ") %>
-                  <%= text_field_tag(:name => order.name) %>
-                  <%= label_tag(:email , "Email: ") %>
-                  <%= text_field_tag(:email => order.email) %>
-                  <%= submit_tag("Actualizar") %>  
+              <%= form_for(@orders do |order| %>
+                  <%= order.label :name %><br>
+                  <%= order.text_field :name %>
+                  <%= order.label :email %><br>
+                  <%= order.text_field :email %>
+                  <%= order.submit %>  
                 <% end %>
               <% end %>
             </div>
