@@ -50,7 +50,7 @@
         </div>
         <div class="section-content">
             <div class="section-row">  
-              <%= form_for(@order do |f| %>
+              <%= form_for url: edit_path, method: :post do |f| %>
                   <%= f.text_field(:name) %>
                   <%= f.text_field(:email) %>
                   <%= f.submit %>  
