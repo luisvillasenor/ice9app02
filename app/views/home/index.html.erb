@@ -42,8 +42,8 @@
         <div class="section-filter">
           <div class="section-row">
             <%= form_tag("/show", method: "get") do %>
-              <%= label_tag(:name , "Buscar por:") %>
-              <%= text_field_tag(:name) %>
+              <%= label_tag(:id , "Buscar por:") %>
+              <%= text_field_tag(:id) %>
               <%= submit_tag("Buscar") %>  
             <% end %>
           </div>
