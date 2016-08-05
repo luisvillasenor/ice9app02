@@ -51,9 +51,7 @@
         <div class="section-content">
             <div class="section-row">  
               <%= form_for(@orders do |order| %>
-                  <%= order.label :name %><br>
                   <%= order.text_field :name %>
-                  <%= order.label :email %><br>
                   <%= order.text_field :email %>
                   <%= order.submit %>  
                 <% end %>
