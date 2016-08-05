@@ -70,12 +70,7 @@
                             <td><%= link_to order.name, controller: 'home', action: 'edit', name: order.name %></td>
                             <td><%= order.created_at.to_datetime.to_formatted_s(:short) %></td>
                             <td><%= order.email %></td>
-                            <td>
-                              <%= if order.financial_status = 'pending' %>
-                                <span class="tag orange">order.financial_status</span>
-                              <% end %>
-                              <%= order.financial_status %>
-                             </td>
+                            <td><%= order.financial_status %></td>
                             <td><%= number_to_currency order.total_price %></td>
                             <td><a href="#top" class="btn default">Cobrar</a></td>
                           </tr>
