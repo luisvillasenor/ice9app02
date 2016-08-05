@@ -15,8 +15,9 @@ class HomeController < AuthenticatedController
   #end
 
   def show
+  	flash[:notice] = "Entraste al metodo show"
   	@orders = ShopifyAPI::Order.find(params[:id])
-  	rnder json: @orders
+  	render json: @orders
   end
 
 end
