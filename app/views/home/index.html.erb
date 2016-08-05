@@ -71,7 +71,7 @@
                             <td><%= order.created_at.to_datetime.to_formatted_s(:short) %></td>
                             <td><%= order.email %></td>
                             <td>
-                              <%= if order.financial_status == 'pending' %>
+                              <%= if order.financial_status = 'pending' %>
                                 <span class="tag orange">order.financial_status</span>
                               <% end %>
                               <%= order.financial_status %>
