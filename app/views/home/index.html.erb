@@ -71,11 +71,11 @@
                           <td><%= number_to_currency order.total_price %></td>
                           <td><a href="#top" class="btn default">Cobrar</a></td>
                         </tr>
-                      <% end %>
-                      <% if @orders.size == 0 %>
-                        <em>No se encontraron ordenes</em>
-                      <% end %>
+                      <% end %>                      
                   </tbody>
+                  <% if @orders.size == 0 %>
+                        <em>No se encontraron ordenes ó se capturo mal el numero de la orden</em>
+                      <% end %>
                 </table>
             </div>
         </div>
