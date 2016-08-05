@@ -50,10 +50,10 @@
         </div>
         <div class="section-content">
             <div class="section-row">  
-              <%= form_for(@orders do |order| %>
-                  <%= order.text_field :name %>
-                  <%= order.text_field :email %>
-                  <%= order.submit %>  
+              <%= form_for(@orders do |f| %>
+                  <%= f.text_field(:name) %>
+                  <%= f.text_field(:email) %>
+                  <%= f.submit %>  
                 <% end %>
               <% end %>
             </div>
