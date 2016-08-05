@@ -15,7 +15,7 @@ class HomeController < AuthenticatedController
   #end
 
   def show
-  	@orders = ShopifyAPI::Order.find(:id => { params[:id] } )
+  	@orders = ShopifyAPI::Order.find( params[:id] )
   end
 
 end
