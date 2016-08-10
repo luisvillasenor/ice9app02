@@ -67,7 +67,7 @@
                     <tbody>
                         <% @orders.each do |order| %>
                           <tr>
-                            <td><%= link_to order.name, "https://#{ @shop_session.url }" if @shop_session %></td>
+                            <td><%= link_to order.name, "https://#{ @shop_session.url }/admin/orders" if @shop_session %></td>
                             <td><%= order.created_at.to_datetime.to_formatted_s(:short) %></td>
                             <td><%= order.email %></td>
                             <td><%= order.financial_status %></td>
@@ -82,6 +82,3 @@
         </div>
     </div>
 </div>
-
-
-        <a href="/products">See All Products</a>
