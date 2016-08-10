@@ -35,7 +35,7 @@
 <div class="section-listing">
     <div class="section-options">
         <ul class="section-tabs">
-            <li class="active"><%= link_to "All", index_path %></li>
+            
             <li class="active"><%= link_to "Pending", pending_path %></li>
             
         </ul>
@@ -67,7 +67,7 @@
                     <tbody>
                         <% @orders.each do |order| %>
                           <tr>
-                            <td><%= link_to order.name, controller: 'home', action: 'edit', name: order.name %></td>
+                            <td><%= link_to order.name, "https://pufipad.myshopify.com/admin/orders/"+order.id %></td>
                             <td><%= order.created_at.to_datetime.to_formatted_s(:short) %></td>
                             <td><%= order.email %></td>
                             <td><%= order.financial_status %></td>
