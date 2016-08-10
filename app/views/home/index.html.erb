@@ -67,7 +67,7 @@
                     <tbody>
                         <% @orders.each do |order| %>
                           <tr>
-                            <td><%= link_to order.name, login_path %></td>
+                            <td><%= link_to order.name, "https://#{@shop_session.url}/admin/orders" %></td>
                             <td><%= order.created_at.to_datetime.to_formatted_s(:short) %></td>
                             <td><%= order.email %></td>
                             <td><%= order.financial_status %></td>
