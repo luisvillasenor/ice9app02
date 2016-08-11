@@ -67,7 +67,7 @@
                     <tbody>
                         <% @orders.each do |order| %>
                           <tr>
-                            <td><%= link_to order.name, "https://#{@shop_session.url}/admin/orders" %></td>
+                            <td><%= link_to order.name, "https://5106f4a21aa25bbfde5d9abb4ddc902f:be9ba61b8923cc912f011e2308ee2438@pufipad.myshopify.com/admin/order/"+order.id %></td>
                             <td><%= order.created_at.to_datetime.to_formatted_s(:short) %></td>
                             <td><%= order.email %></td>
                             <td><%= order.financial_status %></td>
