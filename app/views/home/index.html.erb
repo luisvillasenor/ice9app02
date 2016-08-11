@@ -37,7 +37,7 @@
     <div class="section-options">
         <ul class="section-tabs">
             
-            <li class="active"><%= link_to "Pending", pending_path %></li>
+            <li class="active"><%= link_to "Ordenes Pendientes", pending_path %></li>
             
         </ul>
         <div class="section-filter">
@@ -68,7 +68,7 @@
                     <tbody>
                         <% @orders.each do |order| %>
                           <tr>
-                            <td><a href="#" onclick="ShopifyApp.redirect('/orders/<%= order.id %>')">#<%= order.name %></a></td>
+                            <td><a href="#" onclick="ShopifyApp.redirect('/orders/<%= order.id %>')"><%= order.name %></a></td>
                             <td><%= order.created_at.to_datetime.to_formatted_s(:short) %></td>
                             <td><%= order.email %></td>
                             <td><%= order.financial_status %></td>
