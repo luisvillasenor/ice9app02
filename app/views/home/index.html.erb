@@ -68,7 +68,7 @@
                     <tbody>
                         <% @orders.each do |order| %>
                           <tr>
-                            <td><a href="#" onclick="ShopifyApp.redirect('/orders/#{order.id}')">Order</a></td>
+                            <td><a href="#" onclick="ShopifyApp.redirect('/orders/'<%= order.id %>)">Order</a></td>
                             <td><%= order.created_at.to_datetime.to_formatted_s(:short) %></td>
                             <td><%= order.email %></td>
                             <td><%= order.financial_status %></td>
