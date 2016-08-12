@@ -1,38 +1,21 @@
+<% content_for :javascript do %>
 <script type="text/javascript">
+  window.mainPageTitle = 'Main Page'
   ShopifyApp.ready(function(){
     ShopifyApp.Bar.initialize({
+      title: window.mainPageTitle,
+      icon: 'shopify.png',
       buttons: {
-        primary: {
-          label: 'Print',
-          print: true
+        secondary: {
+          label: "Documentacion",
+          href: "http://docs.shopify.com/embedded-app-sdk",
+          target: 'new'
         }
-      },
-  buttons: {
-    primary: {
-      label: "Refresh",
-      message: 'bar_save',
-      loading: false
-    },
-    secondary: [
-      { label: "Help", callback: function(){ alert('help'); } },
-      { label: "Documentacion", href: "http://docs.shopify.com/embedded-app-sdk", target: "new" }
-      { label: "Configuration", href: "http://my-app.com/preview_url", target: "new" }
-    ],
-  },
-  title: 'Ordenes Pendientes',
-  icon: 'shopify.png',
-  pagination: {
-    next: {
-      href: "/posts?page=2"
-    },
-    previous: {
-      callback: function(){ alert('no previous pages') },
-      loading: false
-    }
-  }
-});
+      }      
+    });
   });
 </script>
+<% end %>
 
 <div class="section-summary">
 <div class="section-row">
@@ -95,6 +78,7 @@
                     </tbody>
                   </table>                  
                 <% end %>
+                <a href=""></a>
             </div>
         </div>
     </div>
