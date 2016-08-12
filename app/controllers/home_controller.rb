@@ -6,25 +6,10 @@ class HomeController < AuthenticatedController
     #render json: @orders
   end
 
-  def pending
- 	@orders = ShopifyAPI::Order.find(:all, :params => {:fields => "id,name,created_at,email,financial_status,total_price", :financial_status => "pending", :limit => 250})
- 	render action: 'index'
-  end
-
-  #def paid
-  #	@orders = ShopifyAPI::Order.find(:all, :params => {:fields => "name,created_at,email,financial_status,total_price", :financial_status => "paid", :limit => 10})
-  #end
-
   def show
-  	@orders = ShopifyAPI::Order.find(:all, :params => {:fields => "id,name,created_at,email,financial_status,total_price", :name => params[:name], :limit => 250 })
+  	@orders = ShopifyAPI::Order.find(:one, :params => {:fields => "id,name,created_at,email,financial_status,total_price", :name => params[:name] })
   	#render json: @orders
   	render action: 'index'
-  end
-
-  def edit
-  	@orders = ShopifyAPI::Order.find(:all, :params => {:fields => "id,name,created_at,email,financial_status,total_price", :name => params[:name], :limit => 250 })
-  	render json: @orders
-  	#render action: 'index'
   end
 
 end
