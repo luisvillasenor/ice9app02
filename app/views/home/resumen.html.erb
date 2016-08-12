@@ -25,7 +25,9 @@
     <div class="section-content">
         <div class="section-row">
             <div class="section-cell">
-                <h1><%= @orders.name %></h1>
+                <h1>
+                  <% @orders.to_json %>
+                </h1>
             </div>
         </div>
     </div>
