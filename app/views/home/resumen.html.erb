@@ -1,0 +1,24 @@
+<script type="text/javascript">
+  ShopifyApp.ready(function(){
+    ShopifyApp.Bar.initialize({
+      title: 'Home',
+      icon: 'shopify.png',      
+      buttons: {
+        secondary: [
+          {
+            label: "Configuracion",
+            href: "/settings",
+            target: 'app'
+          },
+          {
+            label: "Ordenes Pendientes",
+            href: "/pending",
+            target: 'app'
+          }
+        ]
+      }      
+    });
+  });
+</script>
+
+

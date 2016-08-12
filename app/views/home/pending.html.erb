@@ -64,20 +64,7 @@
                             <td><%= order.email %></td>
                             <td><span class="tag yellow"><%= order.financial_status %></span></td>
                             <td><%= number_to_currency order.total_price %></td>
-                            <td><a href="#top" class="btn default" onclick="ShopifyApp.Modal.open({
-  src: 'https://example.com/app/path',
-  title: 'Cobrar Orden',
-  width: 'small',
-  height: 300,
-  buttons: {
-    primary: { label: 'OK' },
-    secondary: [
-      { label: 'Cancel', callback: function (label) { ShopifyApp.Modal.close(); } }
-    ]
-  }
-}, function(result, data){
-  alert('result: ' + result + '   data: ' + data);
-});">Cobrar</a></td>
+                            <td><a href="<%= resumen_path(order.id) %>" class="btn default">Cobrar</a></td>
                           </tr>
                         <% end %>
                     </tbody>

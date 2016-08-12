@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'pending'  => 'home#pending'
   get 'show' => 'home#show'
   get 'settings' => 'home#settings'
+  get 'resumen' => 'home#resumen'
 
   root 'home#index'
   #get 'home/paid'
