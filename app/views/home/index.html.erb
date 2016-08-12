@@ -20,7 +20,7 @@
     ],
   },
   title: 'Ordenes Pendientes',
-  icon: '/shopify.png',
+  icon: 'shopify.png',
   pagination: {
     next: {
       href: "/posts?page=2"
@@ -52,7 +52,7 @@
           </div>
         </div>
         <div class="section-content">
-            <div class="section-row">
+            <div class="section-summary">
                 <% if @orders.size == 0 %>
                   <em>No se encontraron ordenes ó se capturo mal el numero de la orden</em>
                   <% else %>
