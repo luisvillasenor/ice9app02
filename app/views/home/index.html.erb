@@ -84,8 +84,19 @@
                 <% end %>
             </div>
         </div>
-        <a href="#" onclick="ShopifyApp.Modal.alert('An alert message', function(result){
-  alert('The modal was closed.');
+        <a href="#" onclick="ShopifyApp.Modal.open({
+  src: 'https://example.com/app/path',
+  title: 'A new modal',
+  width: 'small',
+  height: 300,
+  buttons: {
+    primary: { label: "OK" },
+    secondary: [
+      { label: "Cancel", callback: function (label) { ShopifyApp.Modal.close(); } }
+    ]
+  }
+}, function(result, data){
+  alert("result: " + result + "   data: " + data);
 });">Alert modal</a>
     </div>
 </div>
