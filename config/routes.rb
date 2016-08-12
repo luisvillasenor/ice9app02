@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   get 'index'  => 'home#index'
+  get 'pending'  => 'home#pending'
   get 'show' => 'home#show'
 
   root 'home#index'
