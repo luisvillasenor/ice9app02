@@ -15,4 +15,8 @@ class HomeController < AuthenticatedController
   	render action: 'index'
   end
 
+  def settings
+    
+  end
+
 end
