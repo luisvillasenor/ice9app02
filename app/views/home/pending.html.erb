@@ -64,7 +64,7 @@
                             <td><%= order.email %></td>
                             <td><span class="tag yellow"><%= order.financial_status %></span></td>
                             <td><%= number_to_currency order.total_price %></td>
-                            <td><a href="<%= resumen_path(order.id) %>" class="btn default">Cobrar</a></td>
+                            <td><a href="<%= redirect_to action: "resumen", id: order.id %>" class="btn default">Cobrar</a></td>
                           </tr>
                         <% end %>
                     </tbody>
