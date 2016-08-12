@@ -76,17 +76,9 @@
                             <td><%= order.email %></td>
                             <td><span class="tag yellow"><%= order.financial_status %></span></td>
                             <td><%= number_to_currency order.total_price %></td>
-                            <td><a href="#top" class="btn default">Cobrar</a></td>
-                          </tr>
-                        <% end %>
-                    </tbody>
-                  </table>                  
-                <% end %>
-            </div>
-        </div>
-        <a href="#" onclick="ShopifyApp.Modal.open({
+                            <td><a href="#top" class="btn default" onclick="ShopifyApp.Modal.open({
   src: 'https://example.com/app/path',
-  title: 'A new modal',
+  title: 'Cobrar Orden',
   width: 'small',
   height: 300,
   buttons: {
@@ -97,7 +89,14 @@
   }
 }, function(result, data){
   alert('result: ' + result + '   data: ' + data);
-});">Alert modal</a>
+});">Cobrar</a></td>
+                          </tr>
+                        <% end %>
+                    </tbody>
+                  </table>                  
+                <% end %>
+            </div>
+        </div>
     </div>
 </div>
 </div>
