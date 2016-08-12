@@ -70,10 +70,10 @@
                     <tbody>
                         <% @orders.each do |order| %>
                           <tr>
-                            <td><a href="#" onclick="ShopifyApp.redirect('/orders/<%= order.id %>')"><%= order.name %></a></td>
+                            <td><a href="#" class="help" onclick="ShopifyApp.redirect('/orders/<%= order.id %>')"><%= order.name %></a></td>
                             <td><%= order.created_at.to_datetime.to_formatted_s(:short) %></td>
                             <td><%= order.email %></td>
-                            <td><%= order.financial_status %></td>
+                            <td><span class="tag yellow"><%= order.financial_status %></span></td>
                             <td><%= number_to_currency order.total_price %></td>
                             <td><a href="#top" class="btn default">Cobrar</a></td>
                           </tr>
