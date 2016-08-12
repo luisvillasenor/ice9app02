@@ -1,9 +1,7 @@
-<% content_for :javascript do %>
 <script type="text/javascript">
-  window.mainPageTitle = 'Main Page'
   ShopifyApp.ready(function(){
     ShopifyApp.Bar.initialize({
-      title: window.mainPageTitle,
+      title: 'Ordenes Pendientes',
       icon: 'shopify.png',
       buttons: {
         secondary: {
@@ -15,7 +13,6 @@
     });
   });
 </script>
-<% end %>
 
 <div class="section-summary">
 <div class="section-row">
