@@ -64,7 +64,7 @@
                             <td><%= order.email %></td>
                             <td><span class="tag yellow"><%= order.financial_status %></span></td>
                             <td><%= number_to_currency order.total_price %></td>
-                            <td><%= link_to "Cobrar", resumen_path(@orders) %></td>
+                            <td><%= link_to "Cobrar", resumen_path(order.id) %></td>
                           </tr>
                         <% end %>
                     </tbody>
