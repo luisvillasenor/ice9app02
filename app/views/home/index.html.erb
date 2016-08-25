@@ -25,7 +25,10 @@
         <div class="section-row">
             <div class="section-cell">
                 <h1>
-                  <%= @pufipad.to_json %>
+                  <% @pufipad.each do |puf| %>
+                    <span>Tienda: <%= puf.name %></span>
+                    <span>Pais: <%= puf.country %></span>                    
+                  <% end %>
                 </h1>
             </div>
         </div>
