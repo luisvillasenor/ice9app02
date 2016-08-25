@@ -26,8 +26,8 @@
             <div class="section-cell">
                 <h1>
                   <% @pufipad.each do |puf| %>
-                    <span>Tienda: <%= puf.name %></span>
-                    <span>Pais: <%= puf.country %></span>                    
+                    <%= puf.name %>
+                    
                   <% end %>
                 </h1>
             </div>
