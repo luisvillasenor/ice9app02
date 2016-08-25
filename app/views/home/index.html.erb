@@ -25,9 +25,7 @@
         <div class="section-row">
             <div class="section-cell">
                 <h1>
-                  <% @pufipad.each do |p| %>
-                    <%= p.name %>
-                  <% end %>
+                  <%= @pufipad.to_json %>
                 </h1>
             </div>
         </div>
