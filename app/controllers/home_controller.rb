@@ -21,7 +21,8 @@ class HomeController < AuthenticatedController
   end
 
   def resumen
-    @orders = ShopifyAPI::Order.find(:all, :params => {:fields => "id,name,created_at,email,financial_status,total_price", :name => params[:name], :limit => 1 })
+    #@orders = ShopifyAPI::Order.find(:all, :params => {:fields => "id,name,created_at,email,financial_status,total_price", :name => params[:name], :limit => 1 })
+    @orders = ShopifyAPI::Order.all
   end
 
 end
