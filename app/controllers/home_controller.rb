@@ -21,6 +21,8 @@ class HomeController < AuthenticatedController
 
   def resumen
     @orders = ShopifyAPI::Order.find(:all, :params => {:name => params[:name], :limit => 1 })
+    my_json_order = @orders.to_json
+    my_pretty_json_order = JSON.pretty_generate(my_json_order) 
   end
 
 end
