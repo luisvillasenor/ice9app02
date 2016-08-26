@@ -1,4 +1,6 @@
 class HomeController < AuthenticatedController
+require 'json'
+
   def index
     @pufipad = ShopifyAPI::Shop.current
   end
