@@ -22,7 +22,7 @@ require 'json'
   end
 
   def resumen
-    @orders = ShopifyAPI::Order.find(:all, :params => {:name => params[:name], :limit => 1 })
+    puts @orders = ShopifyAPI::Order.find(:all, :params => {:name => params[:name], :limit => 1 })
     #puts my_json_order_to_object = JSON.parse(@orders)
     #puts my_pretty_json_order = JSON.pretty_generate(my_json_order_to_object) 
   end
