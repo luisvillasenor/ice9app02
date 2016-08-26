@@ -26,7 +26,7 @@
             <div class="section-cell">
                 <h1>JSON Shop Result <small>Sólo para Desarrollo</small> </h1>
                 <h1>
-                  <%= @pufipad.to_json %>
+                  <%= JSON.pretty_generate(@pufipad.to_json) %>
                 </h1>
             </div>
         </div>
