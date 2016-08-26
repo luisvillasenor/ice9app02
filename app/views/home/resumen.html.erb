@@ -26,7 +26,7 @@
         <div class="section-row">
             <div class="section-cell">
                 <h1>
-                  <%= JSON.parse(@orders)
+                  <%= @orders.to_json
     #puts my_pretty_json_order = JSON.pretty_generate(my_json_order_to_object) 
      %>
                 </h1>
