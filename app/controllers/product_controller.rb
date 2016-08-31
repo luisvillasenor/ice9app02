@@ -1,5 +1,5 @@
 class ProductController < AuthenticatedController
   def index
-    @products = Product.find(:all)
+    @products = ShopifyAPI::Product.find(:all)    
   end
 end
