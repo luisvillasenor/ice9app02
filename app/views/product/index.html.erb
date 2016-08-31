@@ -1,7 +1,4 @@
 <% @products.each do |p| %>
-Titulo: <%= p.title %>
-	
+Titulo: <%= p.title %><br>
+Variants: <%= p.variants %><hr>
 <% end %>
-
-<hr>
-<h1> <%= @products.to_json %></h1>
