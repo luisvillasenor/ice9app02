@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'settings' => 'home#settings'
   get 'resumen' => 'home#resumen'
 
-  get 'products' => 'product/index'
+  get 'products' => 'product#index'
 
 
   root 'home#index'
