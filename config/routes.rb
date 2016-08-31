@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   
-  get 'products' => 'product/index'
 
   controller :sessions do
     get 'login' => :new, :as => :login
@@ -14,6 +13,9 @@ Rails.application.routes.draw do
   get 'show' => 'home#show'
   get 'settings' => 'home#settings'
   get 'resumen' => 'home#resumen'
+
+  get 'products' => 'product/index'
+
 
   root 'home#index'
   #get 'home/paid'
