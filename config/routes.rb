@@ -12,10 +12,10 @@ Rails.application.routes.draw do
   get 'settings'  => 'home#settings'
 
   # ORDERS
-  get 'orders'  => 'orders#index'
-  get 'pending'  => 'orders#pending'
-  get 'show' => 'orders#show'
-  get 'resumen' => 'orders#resumen'
+  
+  get 'pending'  => 'home#pending'
+  get 'show' => 'home#show'
+  get 'resumen' => 'home#resumen'
 
   # PRODUCTS
   get 'products' => 'product#index'
