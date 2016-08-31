@@ -2,8 +2,8 @@ class HomeController < AuthenticatedController
 require 'json'
 
   def index
-    @pufipad = ShopifyAPI::Shop.current
-    #var @pufipad2 = JSON.parse(ShopifyAPI::Shop.current);
+    #var pufipad = ShopifyAPI::Shop.current
+    @pufipad = JSON.stringify(ShopifyAPI::Shop.current);
   end
   def pending
   	@orders = ShopifyAPI::Order.find(:all, :params => {:fields => "id,name,created_at,email,financial_status,total_price", :financial_status => "pending", :limit => 250})
