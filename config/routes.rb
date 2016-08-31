@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  
 
   controller :sessions do
     get 'login' => :new, :as => :login
@@ -8,15 +7,20 @@ Rails.application.routes.draw do
     get 'logout' => :destroy, :as => :logout
   end
 
+  # HOME
   get 'index'  => 'home#index'
-  get 'pending'  => 'home#pending'
-  get 'show' => 'home#show'
-  get 'settings' => 'home#settings'
-  get 'resumen' => 'home#resumen'
+  get 'settings'  => 'home#settings'
 
+  # ORDERS
+  get 'orders'  => 'orders#index'
+  get 'pending'  => 'orders#pending'
+  get 'show' => 'orders#show'
+  get 'resumen' => 'orders#resumen'
+
+  # PRODUCTS
   get 'products' => 'product#index'
 
-
+  # ROOT
   root 'home#index'
   #get 'home/paid'
   #get 'home/:name' => 'home#show'
