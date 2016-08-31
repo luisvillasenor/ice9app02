@@ -10,7 +10,7 @@ class OrdersController < AuthenticatedController
 
   def show
   	@orders = ShopifyAPI::Order.find(:all, :params => {:fields => "id,name,created_at,email,financial_status,total_price", :name => params[:name], :limit => 1 })
-  	render action: 'index'
+  	render action: 'pending'
   end
 
   def resumen
