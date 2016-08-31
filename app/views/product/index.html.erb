@@ -1,7 +1,7 @@
 <% @products.each do |p| %>
 ID: <%= p.id %><br>
 Titulo: <%= p.title %><br>
-Variants: <%= p.variants.price %><br>
+Variants: <br>
 
 	<% p.variants.each do |variant| %>
 		Variant Title: <%= variant.title %>
