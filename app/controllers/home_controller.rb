@@ -3,7 +3,7 @@ require 'json'
 
   def index
     @pufipad = ShopifyAPI::Shop.current
-    @products = ShopifyAPI::Product.methods
+    @products = ShopifyAPI::Product.as_json
   end
   def pending
   	@orders = ShopifyAPI::Order.find(:all, :params => {:fields => "id,name,created_at,email,financial_status,total_price", :financial_status => "pending", :limit => 250})
