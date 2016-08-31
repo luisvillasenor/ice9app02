@@ -1,3 +1,1 @@
-<h1>Product#index</h1>
-<p>Find me in app/views/product/index.html.erb</p>
-<h1><%= @products %></h1>
+<h1><%= JSON.pretty_generate(@products.to_json) %></h1>
