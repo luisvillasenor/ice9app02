@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   # ORDERS
   get 'orders'  => 'orders#index'
-  get 'pending'  => 'orders#pending'
+  get 'pending'  => 'home#pending'
   get 'show' => 'orders#show'
   get 'resumen' => 'orders#resumen'
 
