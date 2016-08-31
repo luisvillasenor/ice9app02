@@ -1,4 +1,4 @@
 <% @products.each do |p| %>
 Titulo: <%= p.title %><br>
-Variants: <%= p.attributes %><hr>
+Variants: <%= p.attributes[:price] %><hr>
 <% end %>
