@@ -1,10 +1,6 @@
 <% @products.each do |p| %>
 Titulo: <%= p.title %>
-	<h1>
-		<% @products.variants.each do |v| %>
-		Precio: <%= v.attributes[:price] %>
-		<% end %>
-	</h1>
+	
 <% end %>
 
 <hr>
