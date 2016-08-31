@@ -8,17 +8,17 @@ Rails.application.routes.draw do
   end
 
   # HOME
-  get 'index'  => 'home#index'
-  get 'settings'  => 'home#settings'
+  get '/index'  => 'home#index'
+  get '/settings'  => 'home#settings'
 
   # ORDERS
-  get 'orders'  => 'orders#index'
-  get 'pending'  => 'home#pending'
-  get 'show' => 'orders#show'
-  get 'resumen' => 'orders#resumen'
+  get '/orders'  => 'orders#index'
+  get '/pending'  => 'home#pending'
+  get '/show' => 'orders#show'
+  get '/resumen' => 'orders#resumen'
 
   # PRODUCTS
-  get 'products' => 'product#index'
+  get '/products' => 'product#index'
 
   # ROOT
   root 'home#index'
