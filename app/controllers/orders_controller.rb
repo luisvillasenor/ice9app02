@@ -1,7 +1,7 @@
 class OrdersController < AuthenticatedController
   
   def index
-  	@orders = ShopifyAPI::Order.find(:all)
+  	#@orders = ShopifyAPI::Order.find(:all)
   end
 
   def pending
